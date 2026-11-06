@@ -1,0 +1,46 @@
+name: Publish read-only course library
+
+on:
+  push:
+    branches:
+      - mhdvirus-immigration-resources-site
+    paths:
+      - ".github/workflows/pages.yml"
+      - "immigration-resources/public/styles.css"
+      - "immigration-resources/static-site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Assemble static site
+        run: |
+          mkdir -p immigration-resources/_site
+          cp immigration-resources/static-site/index.html immigration-resources/_site/index.html
+          cp immigration-resources/static-site/app.js immigration-resources/_site/app.js
+          cp immigration-resources/static-site/resources.json immigration-resources/_site/resources.json
+          cp immigration-resources/public/styles.css immigration-resources/_site/styles.css
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: immigration-resources/_site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

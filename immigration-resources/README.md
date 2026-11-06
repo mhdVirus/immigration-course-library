@@ -33,6 +33,12 @@ Render's free web service can sleep after inactivity and take time to wake. Supa
 
 No cloud accounts or deployment credentials are configured in this repository, so a public deployment URL still needs to be created from the user's Render and Supabase accounts.
 
+## Free read-only site
+
+GitHub Pages can publish the static directory without a running server, database key, or computer left on. The public page is read-only: it does not include owner sign-in, editing, Supabase data, or the AI assistant.
+
+The published catalog is `static-site/resources.json`. Add only references intended for public viewing, then push to the `mhdvirus-immigration-resources-site` branch; the Pages workflow publishes the changes. Each entry can contain `title`, `author`, `type`, `module`, `language`, `url`, and `description`. Do not include passwords, API keys, private notes, or indexed page text.
+
 ## Checks
 
 Run `npm test` for the server/API tests.

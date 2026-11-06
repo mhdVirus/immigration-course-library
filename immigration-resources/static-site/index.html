@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a43">
+    <meta name="description" content="Bibliothèque publique de ressources pour un cours sur les migrations, classées par module.">
+    <title>Bibliothèque des ressources du cours</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="dedication">For Dina Ino, Tbibi7t Ino, Mon Zawjati</div>
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Accueil — ressources du cours">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>Ressources du cours</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="#about">À propos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="index-label">Bibliothèque de cours · migrations</p>
+          <h1 id="page-title">Les ressources du cours.<br><span>Classées par module.</span></h1>
+          <p class="intro-description">Parcourez les livres, articles, liens et références associés aux cinq modules du cours. Les documents peuvent être en arabe, français, anglais, espagnol ou grec.</p>
+        </div>
+        <div class="scope-note">
+          <span class="scope-dot" aria-hidden="true"></span>
+          <p>Édition publique<br><strong>Consultation et recherche uniquement.</strong></p>
+        </div>
+      </section>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <div>
+            <p class="index-label">Livres · articles · liens · supports</p>
+            <h2 id="directory-title">La bibliothèque</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+
+        <form class="filters" id="filter-form" role="search">
+          <label class="search-field">
+            <span class="visually-hidden">Rechercher un titre, auteur ou mot-clé</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+            <input id="search-input" type="search" placeholder="Titre, auteur, module ou mot-clé">
+          </label>
+          <label class="topic-field">
+            <span class="visually-hidden">Filtrer par module</span>
+            <select id="module-filter">
+              <option value="">Tous les modules</option>
+            </select>
+          </label>
+        </form>
+
+        <p class="directory-status" id="directory-status" role="status" aria-live="polite">Chargement des références…</p>
+        <ul class="resource-list" id="resource-list" aria-label="Ressources du cours"></ul>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="index-label">À utiliser avec discernement</p>
+          <h2 id="about-title">Un outil d’étude, pas un avis juridique.</h2>
+        </div>
+        <p>Les références sont publiées à titre pédagogique. Les informations sur les migrations et les politiques publiques peuvent changer : consultez toujours les sources originales et les informations officielles à jour.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Ressources du cours</span>
+      <span>Les références restent attribuées à leurs sources.</span>
+    </footer>
+  </body>
+</html>
