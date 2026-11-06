@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: immigration-course-library
+    runtime: node
+    plan: free
+    rootDir: immigration-resources
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/resources
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false

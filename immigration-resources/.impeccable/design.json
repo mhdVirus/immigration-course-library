@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T02:47:46.648+01:00",
+  "title": "Design System: Course Resource Library",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Harbor Navy",
+        "canonical": "#102a43",
+        "tonalRamp": ["#081522", "#0b1c2b", "#102a43", "#27445a", "#52697a", "#8193a0", "#b3c0c8", "#edf1f3"]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Atlas Blue",
+        "canonical": "#193c58",
+        "tonalRamp": ["#0b1d2b", "#122b40", "#193c58", "#31536b", "#5a7689", "#8ba0ae", "#bdcbd3", "#eef2f4"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Wayfinding Cobalt",
+        "canonical": "#2058d5",
+        "tonalRamp": ["#10254f", "#173a89", "#2058d5", "#4b76df", "#7d9de9", "#afc3f2", "#d4e0fa", "#f0f4fd"]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Deep Cobalt",
+        "canonical": "#143e9d",
+        "tonalRamp": ["#0b1c40", "#102d70", "#143e9d", "#3b5fb1", "#718ac7", "#a9b8dc", "#d0d9eb", "#f1f3f8"]
+      },
+      "accent-pale": {
+        "role": "primary",
+        "displayName": "Cobalt Wash",
+        "canonical": "#e7efff",
+        "tonalRamp": ["#101e3b", "#1a3470", "#2854aa", "#5576b9", "#899fc9", "#b5c5df", "#d5e0f2", "#f2f6ff"]
+      },
+      "action-fill": {
+        "role": "primary",
+        "displayName": "Pale Cobalt Action",
+        "canonical": "#a9c5ff",
+        "tonalRamp": ["#10254f", "#173a89", "#2058d5", "#527be0", "#86a3ea", "#afc3f2", "#d4e0fa", "#f0f4fd"]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Hovered Pale Cobalt",
+        "canonical": "#c5d7ff",
+        "tonalRamp": ["#10254f", "#173a89", "#2058d5", "#527be0", "#86a3ea", "#afc3f2", "#d4e0fa", "#f0f4fd"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool Index Paper",
+        "canonical": "#f3f6f7",
+        "tonalRamp": ["#172126", "#303d44", "#596970", "#829096", "#a9b4b9", "#c5cdd1", "#dce2e5", "#f3f6f7"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White Field",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1a1a1a", "#333333", "#555555", "#777777", "#999999", "#b5b5b5", "#d6d6d6", "#ffffff"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Rule Gray",
+        "canonical": "#cbd6dc",
+        "tonalRamp": ["#182126", "#36444a", "#5a6a72", "#7f8e95", "#a0adb3", "#bbc5ca", "#d5dde0", "#f2f4f5"]
+      },
+      "mint": {
+        "role": "tertiary",
+        "displayName": "Wayfinding Mint",
+        "canonical": "#68d3c1",
+        "tonalRamp": ["#12342f", "#1d594f", "#287c6d", "#42a08e", "#68d3c1", "#91e0d3", "#c2eee7", "#f0fbf9"]
+      },
+      "focus": {
+        "role": "tertiary",
+        "displayName": "Focus Amber",
+        "canonical": "#f1b83d",
+        "tonalRamp": ["#39280b", "#765016", "#b37a22", "#d79a2c", "#f1b83d", "#f5cc70", "#f9dfa5", "#fdf7e8"]
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "Index Green",
+        "canonical": "#2a715c",
+        "tonalRamp": ["#102a23", "#194737", "#2a715c", "#4b8a75", "#79a996", "#a8c6b8", "#d2e1da", "#f2f7f4"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "System Sans Display",
+        "purpose": "Opening course-library heading."
+      },
+      "body": {
+        "displayName": "System Sans Body",
+        "purpose": "French interface copy and multilingual resource metadata."
+      },
+      "label": {
+        "displayName": "Tracked Wayfinding Label",
+        "purpose": "Small uppercase section markers."
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      { "name": "tablet", "value": "760px" },
+      { "name": "mobile", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cobalt action button used for the AI query and resource management.",
+      "html": "<button class=\"ds-primary\">Interroger l’assistant</button>",
+      "css": ".ds-primary { min-height: 42px; padding: 9px 16px; border: 1px solid transparent; border-radius: 2px; background: var(--action-fill); color: #102a43; font: 750 14px/1.4 'Segoe UI', Arial, sans-serif; } .ds-primary:hover { background: var(--action-hover); } .ds-primary:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "A wide white field for title, author, and topic search.",
+      "html": "<input class=\"ds-search\" type=\"search\" aria-label=\"Titre, auteur, module ou mot-clé\" placeholder=\"Titre, auteur, module ou mot-clé\">",
+      "css": ".ds-search { width: 100%; height: 52px; padding: 0 16px; border: 1px solid #cbd6dc; border-radius: 2px; background: #ffffff; color: #102a43; font: 400 14px/1.5 'Segoe UI', Arial, sans-serif; } .ds-search:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Masthead",
+      "kind": "nav",
+      "description": "A compact navy navigation band with a mint bar mark.",
+      "html": "<nav class=\"ds-nav\"><strong>Ressources du cours</strong><a href=\"#about\">À propos</a></nav>",
+      "css": ".ds-nav { min-height: 68px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; background: #102a43; color: #ffffff; font: 700 14px/1.4 'Segoe UI', Arial, sans-serif; } .ds-nav a { color: #ffffff; text-underline-offset: 4px; } .ds-nav a:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Module Label",
+      "kind": "chip",
+      "description": "An outlined Arabic course module label with RTL direction.",
+      "html": "<span class=\"ds-module\" lang=\"ar\" dir=\"rtl\">مدخل الى سوسيولوجيا الهجرة</span>",
+      "css": ".ds-module { display: inline-block; max-width: 100%; padding: 4px 8px; border: 1px solid #aebfd0; color: #24465f; font: 700 11px/1.45 'Segoe UI', Arial, sans-serif; }"
+    },
+    {
+      "name": "Resource Row",
+      "kind": "custom",
+      "description": "A ruled row identifying a course resource, its module, and its original source.",
+      "html": "<article class=\"ds-resource\"><div><h3>Référence de cours</h3><p>Auteur ou éditeur</p></div><span class=\"ds-module\" lang=\"ar\" dir=\"rtl\">مدخل الى سوسيولوجيا الهجرة</span><a href=\"#source\">Ouvrir la source ↗</a></article>",
+      "css": ".ds-resource { padding: 22px 4px; display: grid; grid-template-columns: minmax(180px, 1.15fr) minmax(145px, .7fr) minmax(160px, auto); align-items: start; gap: 20px; border-bottom: 1px solid #cbd6dc; color: #102a43; font: 400 13px/1.55 'Segoe UI', Arial, sans-serif; } .ds-resource h3 { margin: 0 0 5px; font-size: 17px; font-weight: 750; } .ds-resource p { margin: 0; color: #42586b; } .ds-resource a { color: #143e9d; font-weight: 750; text-underline-offset: 4px; } .ds-resource a:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Assistant Panel",
+      "kind": "custom",
+      "description": "A navy research area for questions grounded in saved course resources.",
+      "html": "<section class=\"ds-assistant\"><h2>Posez une question au cours.</h2><textarea aria-label=\"Votre question\"></textarea><button class=\"ds-primary\">Interroger l’assistant</button></section>",
+      "css": ".ds-assistant { padding: 26px 32px 28px; display: grid; grid-template-columns: 1fr 1.2fr; align-items: center; gap: 18px 32px; background: #193c58; color: #ffffff; font: 400 13px/1.55 'Segoe UI', Arial, sans-serif; } .ds-assistant h2 { margin: 0; font-size: 26px; line-height: 1.13; letter-spacing: -.035em; } .ds-assistant textarea { width: 100%; min-height: 76px; padding: 12px 14px; border: 1px solid #7591a6; border-radius: 2px; background: #ffffff; color: #102a43; font: inherit; } .ds-assistant textarea:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; } .ds-primary { min-height: 42px; padding: 9px 16px; border: 0; border-radius: 2px; background: var(--action-fill); color: #102a43; font: 750 14px/1.4 'Segoe UI', Arial, sans-serif; } .ds-primary:hover { background: var(--action-hover); } .ds-primary:focus-visible { outline: 3px solid #f1b83d; outline-offset: 3px; } @media (max-width: 760px) { .ds-assistant { grid-template-columns: 1fr; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Civic Course Index",
+    "overview": "The interface treats course references as public-interest information: legible labels, clear source ownership, a calm reading field, and practical wayfinding. French is the interface language; Arabic module names and multilingual resources retain their own language and direction rather than being visually flattened into French.\n\nThe visual system is restrained and flat. A deep navy masthead and assistant panel anchor a pale neutral canvas; cobalt identifies the active reading path. Ruled rows carry the content instead of a card grid. The interface prioritizes quick scanning and explicit source attribution over decoration.",
+    "keyCharacteristics": [
+      "Civic navy with a single cobalt action accent.",
+      "Compact uppercase labels and a large, tightly tracked sans-serif display.",
+      "Flat surfaces, fine rules, and mostly square controls.",
+      "Resource entries preserve original language and right-to-left Arabic text."
+    ],
+    "rules": [
+      {
+        "name": "The Source-First Rule",
+        "body": "Color marks navigation and actions; it never replaces the resource title, publisher, or course module as the primary information.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Use the system sans for both display and body; establish hierarchy with scale, weight, and spacing, not decorative type contrast.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the Arabic module titles exactly and set their text direction to RTL.",
+      "Do identify the resource type, module, and original language before the description.",
+      "Do keep AI answers paired with links to retrieved resources.",
+      "Do use fine rules and tonal contrast to organize the library."
+    ],
+    "donts": [
+      "Don't turn every reference into a card.",
+      "Don't translate or rewrite resource titles without an explicit editorial decision.",
+      "Don't use AI answers as legal advice or let them stand without source references.",
+      "Don't expose full indexed page text or model vectors in public API responses."
+    ]
+  }
+}
